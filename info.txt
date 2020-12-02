@@ -1,0 +1,3 @@
+Username = jessica
+Password = Jenda2020
+db connection = mongodb+srv://jessica:<password>@cluster0.z7fa8.mongodb.net/<dbname>
