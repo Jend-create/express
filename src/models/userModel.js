@@ -1,6 +1,7 @@
 const mongoose = require ('mongoose');
 const bcrypt = require ('bcrypt')
 
+
 const userSchema = new mongoose.Schema({
     username: {
              type: String,
@@ -22,6 +23,15 @@ const userSchema = new mongoose.Schema({
                required: [true, 'you must enter a password']
             },
   
+})
+
+userSchema.set('toJSON', {
+    transfrom: (doc, user) => {
+        user.id = user._id.toString()
+        delete user._id
+        delete user.__v
+        delete user.password
+    }
 })
 
 
