@@ -53,7 +53,7 @@ postCtrl.createPost = async (req, res)=> {
 // read all posts = GET method
 postCtrl.getPostDetails = async (req, res) => {
     try{
-        let postDetails = await Post.find({ id: req.body.id })
+        let postDetails = await Post.find({ author: req.body.author })
         if (!postDetails){
              res.status(400).send({message: 'post not found'})
     } 

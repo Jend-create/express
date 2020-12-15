@@ -16,11 +16,11 @@ author: {
 content: {
       type: String,
       minlength: 8,
-      maxlength: 50,
+      maxlength: 700,
       required: [true, 'Enter contents here...']
    },
    
-creationdate: {type: Number,
+creationdate: {type: String,
     unique: true,
     required: [true ],
 },

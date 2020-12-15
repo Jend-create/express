@@ -10,7 +10,7 @@ const app = express();
 const dbLink = process.env.DBLINK
 const port = process.env.PORT
 const userRoute = require('./src/route/userRoute')
-const postRoute = require('./src/route/userRoute')
+const postRoute = require('./src/route/postRoute')
 
 //database connection
 mongoose.connect(dbLink, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}, () => {
